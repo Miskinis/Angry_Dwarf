@@ -32,7 +32,6 @@ public class RangedAttackController : MonoBehaviour
         foreach (var attackBehavior in _gunShotBehaviors)
             attackBehavior.onFrameAction = () =>
             {
-                Debug.Log(attackBehavior);
                 if (entityManager == null || entityManager.Exists(_entity) == false)
                 {
                     Destroy(this);
