@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Angry dwarf.unity
+    guid: 671ad233bbda6254bb2de1a3d9b8fec8
   m_configObjects: {}
