@@ -7,9 +7,10 @@ public class HealBuffController : PlayerBuff
 
     private void OnTriggerEnter(Collider other)
     {
+        var entityManager = _entityCommandBufferSystem.EntityManager;
         if (other.CompareTag("Player") && entityManager.GetComponentData<Health>(playerEntity).value < heal)
         {
-            entityManager.SetComponentData(playerEntity, new Health(heal));
+            _entityCommandBufferSystem.CreateCommandBuffer().SetComponent(playerEntity, new Health(heal));
             Instantiate(pickupEffectPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }

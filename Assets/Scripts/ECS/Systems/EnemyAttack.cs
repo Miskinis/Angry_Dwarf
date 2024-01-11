@@ -11,7 +11,7 @@ namespace ECS.Systems
         private EntityQuery _meleeEnemyAttackQuery;
         private EntityQuery _rangedEnemyAttackQuery;
 
-        protected override void OnCreateManager()
+        protected override void OnCreate()
         {
             _meleeEnemyAttackQuery = GetEntityQuery(new EntityQueryDesc
             {

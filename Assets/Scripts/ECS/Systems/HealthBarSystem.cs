@@ -9,7 +9,7 @@ namespace ECS.Systems
     {
         private EntityQuery _hpBarQuery;
 
-        protected override void OnCreateManager()
+        protected override void OnCreate()
         {
             _hpBarQuery = GetEntityQuery(new EntityQueryDesc
             {

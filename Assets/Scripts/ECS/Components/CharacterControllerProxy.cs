@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ECS.Components
 {
-    [RequiresEntityConversion]
+    
     [DisallowMultipleComponent]
     [RequireComponent(typeof(CharacterController))]
     public class CharacterControllerProxy : MonoBehaviour, IConvertGameObjectToEntity

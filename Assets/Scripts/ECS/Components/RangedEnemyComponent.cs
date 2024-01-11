@@ -14,7 +14,7 @@ namespace ECS.Components
         }
     }
 
-    [RequiresEntityConversion]
+    
     [DisallowMultipleComponent]
     [RequireComponent(typeof(Animator), typeof(MecanimSwitchWeaponParameterComponent))]
     public class RangedEnemyComponent : MonoBehaviour, IConvertGameObjectToEntity

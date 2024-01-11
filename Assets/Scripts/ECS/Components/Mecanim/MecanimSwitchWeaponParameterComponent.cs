@@ -13,7 +13,7 @@ namespace ECS.Components.Mecanim
         }
     }
 
-    [RequiresEntityConversion]
+    
     [DisallowMultipleComponent]
     public class MecanimSwitchWeaponParameterComponent : MonoBehaviour, IConvertGameObjectToEntity
     {

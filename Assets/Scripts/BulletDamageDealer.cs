@@ -1,9 +1,11 @@
 using System.Collections;
 using ECS;
 using ECS.Components;
+using OddLock.Components.Generic;
 using Unity.Entities;
 using Unity.Mathematics;
 using UnityEngine;
+using EntityAuthoring = OddLock.Components.Generic.EntityAuthoring;
 
 [DisallowMultipleComponent]
 [RequireComponent(typeof(Rigidbody), typeof(Collider))]
@@ -16,16 +18,16 @@ public class BulletDamageDealer : MonoBehaviour
     public GameObject hitEffect;
 
     private Entity _entity;
-    private EntityManager _entityManager;
+    private BeginFixedStepSimulationEntityCommandBufferSystem _entityCommandBufferSystem;
     private Rigidbody _rigidbody;
 
-    private void Awake()
+    private void Start()
     {
-        _entity                = GetComponentInParent<ConvertHierarchyToEntities>().HierarchyRootEntity;
-        _entityManager         = World.Active.EntityManager;
-        _rigidbody             = GetComponent<Rigidbody>();
-        _rigidbody.isKinematic = false;
-        transform.parent = null;
+        _entity                    = GetComponentInParent<EntityAuthoring>().entity;
+        _entityCommandBufferSystem = World.DefaultGameObjectInjectionWorld.GetOrCreateSystem<BeginFixedStepSimulationEntityCommandBufferSystem>();
+        _rigidbody                 = GetComponent<Rigidbody>();
+        _rigidbody.isKinematic     = false;
+        transform.parent           = null;
         _rigidbody.AddForce(transform.forward * shotForce);
         Instantiate(shotEffect, transform.position, quaternion.identity);
     }
@@ -40,18 +42,19 @@ public class BulletDamageDealer : MonoBehaviour
     {
         StartCoroutine(SelfDestruct(selfDestructDelay));
 
-        if (_entityManager == null || _entityManager.Exists(_entity) == false)
+        var entityManager = _entityCommandBufferSystem.EntityManager;
+        if (entityManager == null || entityManager.Exists(_entity) == false)
         {
             Destroy(this);
             return;
         }
 
-        var otherEntityObject = other.GetComponent<ConvertHierarchyToEntities>();
+        var otherEntityObject = other.GetComponent<EntityAuthoring>();
         if (otherEntityObject == null || other.GetComponent<HealthComponent>() == null) return;
 
-        var otherEntity = otherEntityObject.HierarchyRootEntity;
+        var otherEntity = otherEntityObject.entity;
 
-        _entityManager.AddComponentData(otherEntity, new DealDamage(damage));
+        _entityCommandBufferSystem.CreateCommandBuffer().AddComponent(otherEntity, new DealDamage(damage));
         Instantiate(hitEffect, other.transform.position, Quaternion.identity);
     }
 }

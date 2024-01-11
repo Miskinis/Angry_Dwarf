@@ -9,7 +9,7 @@ namespace ECS.Systems
     {
         private EntityQuery _velocityQuery;
 
-        protected override void OnCreateManager()
+        protected override void OnCreate()
         {
             _velocityQuery = GetEntityQuery(new EntityQueryDesc
             {
@@ -19,7 +19,7 @@ namespace ECS.Systems
 
         protected override void OnUpdate()
         {
-            var deltaTime = Time.deltaTime;
+            var deltaTime = Time.DeltaTime;
             Entities.With(_velocityQuery).ForEach((ref Velocity velocity, ref Translation translation, ref PreviousPosition previousPosition) =>
             {
                 velocity.value         = (translation.Value - previousPosition.value) / deltaTime;

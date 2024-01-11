@@ -17,7 +17,7 @@ namespace ECS.Components
         }
     }
 
-    [RequiresEntityConversion]
+    
     [DisallowMultipleComponent]
     [RequireComponent(typeof(CharacterControllerProxy), typeof(PlayerMovementInputComponent), typeof(RotationSpeedComponent))]
     [RequireComponent(typeof(MovementSpeedComponent), typeof(CustomCopyTransformFromGameObject), typeof(MecanimIsWalkingParameterComponent))]

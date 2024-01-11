@@ -8,7 +8,7 @@ namespace ECS.Systems
     {
         private EntityQuery _velocityQuery;
 
-        protected override void OnCreateManager()
+        protected override void OnCreate()
         {
             _velocityQuery = GetEntityQuery(new EntityQueryDesc
             {

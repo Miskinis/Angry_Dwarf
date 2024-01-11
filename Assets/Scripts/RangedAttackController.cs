@@ -1,14 +1,15 @@
-using ECS;
 using MecanimBehaviors;
+using OddLock.Components.Generic;
 using Unity.Entities;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [DisallowMultipleComponent]
 [RequireComponent(typeof(Animator))]
 public class RangedAttackController : MonoBehaviour
 {
     public Transform gunExhaustPoint;
-    public ConvertHierarchyToEntities rootEntityObject;
+    private EntityAuthoring _rootEntityObject;
     public Animator animator;
     public float maxHitDistance = 100f;
     public ushort damage;
@@ -17,24 +18,28 @@ public class RangedAttackController : MonoBehaviour
     private GunShotBehavior[] _gunShotBehaviors;
 
     private Entity _entity;
-    private EntityManager _entityManager;
+    private BeginFixedStepSimulationEntityCommandBufferSystem _entityCommandBufferSystem;
 
-    private void Awake()
+    private void Start()
     {
-        _entity        = rootEntityObject.HierarchyRootEntity;
-        _entityManager = World.Active.EntityManager;
+        _rootEntityObject          = GetComponent<EntityAuthoring>();
+        _entity                    = _rootEntityObject.entity;
+        _entityCommandBufferSystem = World.DefaultGameObjectInjectionWorld.GetOrCreateSystem<BeginFixedStepSimulationEntityCommandBufferSystem>();
 
         _gunShotBehaviors = animator.GetBehaviours<GunShotBehavior>();
+
+        var entityManager = _entityCommandBufferSystem.EntityManager;
         foreach (var attackBehavior in _gunShotBehaviors)
             attackBehavior.onFrameAction = () =>
             {
-                if (_entityManager == null || _entityManager.Exists(_entity) == false)
+                Debug.Log(attackBehavior);
+                if (entityManager == null || entityManager.Exists(_entity) == false)
                 {
                     Destroy(this);
                     return;
                 }
 
-                Instantiate(bulletPrefab, gunExhaustPoint.position, gunExhaustPoint.rotation, rootEntityObject.transform);
+                Instantiate(bulletPrefab, gunExhaustPoint.position, gunExhaustPoint.rotation, _rootEntityObject.transform);
             };
     }
 

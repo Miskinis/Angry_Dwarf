@@ -7,7 +7,7 @@ namespace ECS.Systems
     {
         private EntityQuery _dealDamageQuery;
 
-        protected override void OnCreateManager()
+        protected override void OnCreate()
         {
             _dealDamageQuery = GetEntityQuery(new EntityQueryDesc
             {

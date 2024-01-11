@@ -13,7 +13,7 @@ namespace ECS.Components
         }
     }
 
-    [RequiresEntityConversion]
+    
     [DisallowMultipleComponent]
     public class RotationSpeedComponent : MonoBehaviour, IConvertGameObjectToEntity
     {

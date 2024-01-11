@@ -35,7 +35,7 @@ namespace ECS.Systems
         private EntityQuery _disableAgent;
         private EntityQuery _destroyAgent;
 
-        protected override void OnCreateManager()
+        protected override void OnCreate()
         {
             _getNextPositionGroup = GetEntityQuery(new EntityQueryDesc
             {

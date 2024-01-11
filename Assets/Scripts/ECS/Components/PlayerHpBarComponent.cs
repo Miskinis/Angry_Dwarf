@@ -1,9 +1,10 @@
+using System;
 using Unity.Entities;
 using UnityEngine;
 
 namespace ECS.Components
 {
-    public struct PlayerHpBar : ISharedComponentData
+    public struct PlayerHpBar : ISharedComponentData, IEquatable<PlayerHpBar>
     {
         public Transform heartsContainer;
         public GameObject heartPrefab;
@@ -12,6 +13,31 @@ namespace ECS.Components
         {
             this.heartsContainer = heartsContainer;
             this.heartPrefab     = heartPrefab;
+        }
+
+        public bool Equals(PlayerHpBar other)
+        {
+            return Equals(heartsContainer, other.heartsContainer) && Equals(heartPrefab, other.heartPrefab);
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is PlayerHpBar other && Equals(other);
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(heartsContainer, heartPrefab);
+        }
+
+        public static bool operator ==(PlayerHpBar left, PlayerHpBar right)
+        {
+            return left.Equals(right);
+        }
+
+        public static bool operator !=(PlayerHpBar left, PlayerHpBar right)
+        {
+            return !left.Equals(right);
         }
     }
 

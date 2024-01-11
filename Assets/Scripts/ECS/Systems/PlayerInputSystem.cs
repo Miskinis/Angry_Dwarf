@@ -12,7 +12,7 @@ namespace ECS.Systems
         private EntityQuery _movePlayerGroup;
         private EntityQuery _uncontrolledGravityGroup;
 
-        protected override void OnCreateManager()
+        protected override void OnCreate()
         {
             _rotatePlayerGroup = GetEntityQuery(new EntityQueryDesc
             {
@@ -50,7 +50,7 @@ namespace ECS.Systems
                 playerInput = new PlayerMovementInput(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), Input.mousePosition);
             });
 
-            var deltaTime = Time.deltaTime;
+            var deltaTime = Time.DeltaTime;
 
             Entities.With(_rotatePlayerGroup).ForEach((Transform transform, ref RotationSpeed rotationSpeed, ref PlayerMovementInput playerInput) =>
             {

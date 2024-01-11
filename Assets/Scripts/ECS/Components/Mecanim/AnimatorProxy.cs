@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ECS.Components.Mecanim
 {
-    [RequiresEntityConversion]
+    
     [DisallowMultipleComponent]
     [RequireComponent(typeof(Animator))]
     public class AnimatorProxy : MonoBehaviour, IConvertGameObjectToEntity

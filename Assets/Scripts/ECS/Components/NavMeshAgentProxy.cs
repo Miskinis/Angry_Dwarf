@@ -4,7 +4,7 @@ using UnityEngine.AI;
 
 namespace ECS.Components
 {
-    [RequiresEntityConversion]
+    
     [DisallowMultipleComponent]
     [RequireComponent(typeof(NavMeshAgent))]
     public class NavMeshAgentProxy : MonoBehaviour, IConvertGameObjectToEntity

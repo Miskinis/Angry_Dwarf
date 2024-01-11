@@ -5,7 +5,7 @@ using UnityEngine;
 namespace ECS.Components
 {
     [DisallowMultipleComponent]
-    [RequiresEntityConversion]
+    
     public class CustomCopyTransformFromGameObject : MonoBehaviour, IConvertGameObjectToEntity
     {
         public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)

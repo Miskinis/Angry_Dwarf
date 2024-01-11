@@ -9,7 +9,7 @@ namespace ECS.Systems
     {
         private EntityQuery _enemyChaseQuery;
 
-        protected override void OnCreateManager()
+        protected override void OnCreate()
         {
             _enemyChaseQuery = GetEntityQuery(new EntityQueryDesc
             {

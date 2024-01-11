@@ -1,9 +1,10 @@
+using System;
 using Unity.Entities;
 using UnityEngine;
 
 namespace ECS.Components
 {
-    public struct EnemyDeathDrop : ISharedComponentData
+    public struct EnemyDeathDrop : ISharedComponentData, IEquatable<EnemyDeathDrop>
     {
         public GameObject[] buffPrefabs;
         public float dropChance;
@@ -13,6 +14,31 @@ namespace ECS.Components
         {
             this.buffPrefabs = buffPrefabs;
             this.dropChance  = dropChance;
+        }
+
+        public bool Equals(EnemyDeathDrop other)
+        {
+            return Equals(buffPrefabs, other.buffPrefabs) && dropChance.Equals(other.dropChance);
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is EnemyDeathDrop other && Equals(other);
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(buffPrefabs, dropChance);
+        }
+
+        public static bool operator ==(EnemyDeathDrop left, EnemyDeathDrop right)
+        {
+            return left.Equals(right);
+        }
+
+        public static bool operator !=(EnemyDeathDrop left, EnemyDeathDrop right)
+        {
+            return !left.Equals(right);
         }
     }
 

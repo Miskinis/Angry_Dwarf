@@ -12,7 +12,7 @@ namespace ECS.Systems
         private EntityQuery _enemyQuery;
         private EntityQuery _cleanupQuery;
 
-        protected override void OnCreateManager()
+        protected override void OnCreate()
         {
             _cleanupQuery = GetEntityQuery(new EntityQueryDesc
             {

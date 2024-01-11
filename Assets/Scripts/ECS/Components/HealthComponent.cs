@@ -23,7 +23,7 @@ namespace ECS.Components
         }
     }
 
-    [RequiresEntityConversion]
+    
     [DisallowMultipleComponent]
     public class HealthComponent : MonoBehaviour, IConvertGameObjectToEntity
     {

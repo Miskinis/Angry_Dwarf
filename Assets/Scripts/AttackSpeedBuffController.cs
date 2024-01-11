@@ -10,9 +10,10 @@ public class AttackSpeedBuffController : PlayerBuff
 
     private void OnTriggerEnter(Collider other)
     {
+        var entityManager = _entityCommandBufferSystem.EntityManager;
         if (other.CompareTag("Player") && entityManager.HasComponent<AttackSpeedBuff>(playerEntity) == false)
         {
-            entityManager.AddComponentData(playerEntity, new AttackSpeedBuff(effectDuration, attackSpeedMultiplier));
+            _entityCommandBufferSystem.CreateCommandBuffer().AddComponent(playerEntity, new AttackSpeedBuff(effectDuration, attackSpeedMultiplier));
             Instantiate(pickupEffectPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }

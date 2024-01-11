@@ -7,9 +7,10 @@ public class ShieldBuffController : PlayerBuff
 
     private void OnTriggerEnter(Collider other)
     {
+        var entityManager = _entityCommandBufferSystem.EntityManager;
         if (other.CompareTag("Player") && entityManager.HasComponent<ShieldBuff>(playerEntity) == false)
         {
-            entityManager.AddComponentData(playerEntity, new ShieldBuff(effectDuration));
+            _entityCommandBufferSystem.CreateCommandBuffer().AddComponent(playerEntity, new ShieldBuff(effectDuration));
             Instantiate(pickupEffectPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }

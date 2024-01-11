@@ -1,20 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &2126918916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5381537855693937357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70e6d97eb9d642daaec5c70adf8d44e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickupEffectPrefab: {fileID: 2179282763330260331, guid: 3888ffd85c5e8cd44a6d962070fd69ff,
-    type: 3}
-  effectDuration: 5
 --- !u!1001 &4553175545816772752
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22,10 +7,55 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8475547053510044253, guid: b6a5929be60337b4abce803aad30bd69,
+    - target: {fileID: 1231674999, guid: b6a5929be60337b4abce803aad30bd69, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1231674999, guid: b6a5929be60337b4abce803aad30bd69, type: 3}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 761174374711625101, guid: f85b0dd1b68aaa943bcfdb633e22269f,
         type: 3}
-      propertyPath: m_Name
-      value: Shield BUFF (2) Variant
+    - target: {fileID: 263355015813796987, guid: b6a5929be60337b4abce803aad30bd69,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 998704361409894116, guid: b6a5929be60337b4abce803aad30bd69,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952497988048432519, guid: b6a5929be60337b4abce803aad30bd69,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2443897407122136997, guid: b6a5929be60337b4abce803aad30bd69,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 7b5a4e02c58e76349867b353cff4fda6,
+        type: 3}
+    - target: {fileID: 2707643644112523200, guid: b6a5929be60337b4abce803aad30bd69,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3838311853988440235, guid: b6a5929be60337b4abce803aad30bd69,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3838311853988440235, guid: b6a5929be60337b4abce803aad30bd69,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4883143323860457550, guid: b6a5929be60337b4abce803aad30bd69,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4883143323860457550, guid: b6a5929be60337b4abce803aad30bd69,
         type: 3}
@@ -44,6 +74,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4883143323860457550, guid: b6a5929be60337b4abce803aad30bd69,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4883143323860457550, guid: b6a5929be60337b4abce803aad30bd69,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -55,16 +90,6 @@ PrefabInstance:
     - target: {fileID: 4883143323860457550, guid: b6a5929be60337b4abce803aad30bd69,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4883143323860457550, guid: b6a5929be60337b4abce803aad30bd69,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4883143323860457550, guid: b6a5929be60337b4abce803aad30bd69,
-        type: 3}
-      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4883143323860457550, guid: b6a5929be60337b4abce803aad30bd69,
@@ -82,35 +107,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1231674999, guid: b6a5929be60337b4abce803aad30bd69, type: 3}
-      propertyPath: player
-      value: 
+    - target: {fileID: 5845783221843546927, guid: b6a5929be60337b4abce803aad30bd69,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 1231674999, guid: b6a5929be60337b4abce803aad30bd69, type: 3}
-      propertyPath: pickupSound
-      value: 
-      objectReference: {fileID: 761174374711625101, guid: f85b0dd1b68aaa943bcfdb633e22269f,
+    - target: {fileID: 6249860270411489717, guid: b6a5929be60337b4abce803aad30bd69,
         type: 3}
-    - target: {fileID: 2443897407122136997, guid: b6a5929be60337b4abce803aad30bd69,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: -2432090755550338912, guid: 7b5a4e02c58e76349867b353cff4fda6,
-        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6397597977814119253, guid: b6a5929be60337b4abce803aad30bd69,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: fefc2d94ec1d23f4ca41f399ff18d63d, type: 2}
-    - target: {fileID: 3838311853988440235, guid: b6a5929be60337b4abce803aad30bd69,
+    - target: {fileID: 6576018958244545048, guid: b6a5929be60337b4abce803aad30bd69,
         type: 3}
-      propertyPath: m_Center.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3838311853988440235, guid: b6a5929be60337b4abce803aad30bd69,
-        type: 3}
-      propertyPath: m_Center.y
-      value: 0
+      propertyPath: m_BoundingSphereOverride.w
+      value: 2.3510647e-38
       objectReference: {fileID: 0}
     - target: {fileID: 6576018958244545048, guid: b6a5929be60337b4abce803aad30bd69,
         type: 3}
@@ -127,10 +142,25 @@ PrefabInstance:
       propertyPath: m_BoundingSphereOverride.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6576018958244545048, guid: b6a5929be60337b4abce803aad30bd69,
+    - target: {fileID: 8165336889036909469, guid: b6a5929be60337b4abce803aad30bd69,
         type: 3}
-      propertyPath: m_BoundingSphereOverride.w
-      value: 2.3510647e-38
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8475547053510044253, guid: b6a5929be60337b4abce803aad30bd69,
+        type: 3}
+      propertyPath: m_Name
+      value: Shield BUFF (2) Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8475547053510044253, guid: b6a5929be60337b4abce803aad30bd69,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9187847352950141510, guid: b6a5929be60337b4abce803aad30bd69,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1231674999, guid: b6a5929be60337b4abce803aad30bd69, type: 3}
@@ -141,3 +171,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4553175545816772752}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2126918916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5381537855693937357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70e6d97eb9d642daaec5c70adf8d44e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupEffectPrefab: {fileID: 2179282763330260331, guid: 3888ffd85c5e8cd44a6d962070fd69ff,
+    type: 3}
+  effectDuration: 5

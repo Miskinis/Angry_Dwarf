@@ -9,7 +9,7 @@ namespace ECS.Systems
         private EntityQuery _attackSpeedBuffQuery;
         private EntityQuery _shieldBuffQuery;
 
-        protected override void OnCreateManager()
+        protected override void OnCreate()
         {
             _attackSpeedBuffQuery = GetEntityQuery(new EntityQueryDesc
             {
@@ -24,7 +24,7 @@ namespace ECS.Systems
 
         protected override void OnUpdate()
         {
-            var deltaTime = Time.deltaTime;
+            var deltaTime = Time.DeltaTime;
 
             Entities.With(_attackSpeedBuffQuery).ForEach((Entity entity, ref AttackSpeedBuff attackSpeedBuff, ref AttackSpeedMultiplier attackSpeedMultiplier) =>
             {

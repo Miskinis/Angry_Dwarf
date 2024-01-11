@@ -13,7 +13,7 @@ namespace ECS.Systems
         private EntityQuery _enemyDieQuery;
         private EntityQuery _bossDieQuery;
 
-        protected override void OnCreateManager()
+        protected override void OnCreate()
         {
             _dieQuery = GetEntityQuery(new EntityQueryDesc
             {

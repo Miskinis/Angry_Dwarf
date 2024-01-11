@@ -14,7 +14,8 @@ namespace ECS.Systems
         private EntityQuery _switchWeaponQuery;
         private EntityQuery _attackQuery;
 
-        protected override void OnCreateManager()
+        
+        protected override void OnCreate()
         {
             _isWalkingQuery = GetEntityQuery(new EntityQueryDesc
             {
