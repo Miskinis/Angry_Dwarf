@@ -4,7 +4,7 @@ public class PauseGameWhileActive : MonoBehaviour
 {
     private void OnEnable()
     {
-        Time.timeScale = 1f;
+        Time.timeScale = 0f;
     }
 
     private void OnDisable()

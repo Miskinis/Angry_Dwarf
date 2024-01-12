@@ -68,20 +68,20 @@ namespace ECS.Systems
             Entities.With(_playerDieQuery).ForEach(entity =>
             {
                 UiController.main.gameOverPanel.SetActive(true);
-                PostUpdateCommands.DestroyEntity(entity);
+                PostUpdateCommands.AddComponent(entity, new Disabled());
             });
 
             Entities.With(_enemyDieQuery).ForEach((Entity entity, EnemyDeathDrop enemyDeathDrop, ref Translation translation) =>
             {
                 if (Random.Range(0, 100) < enemyDeathDrop.dropChance)
                     Object.Instantiate(enemyDeathDrop.buffPrefabs[Random.Range(0, enemyDeathDrop.buffPrefabs.Length - 1)], translation.Value, Quaternion.identity);
-                PostUpdateCommands.DestroyEntity(entity);
+                PostUpdateCommands.AddComponent(entity, new Disabled());
             });
 
             Entities.With(_bossDieQuery).ForEach((Entity entity, Boss boss) =>
             {
                 boss.victoryPanel.SetActive(true);
-                PostUpdateCommands.DestroyEntity(entity);
+                PostUpdateCommands.AddComponent(entity, new Disabled());
             });
         }
     }

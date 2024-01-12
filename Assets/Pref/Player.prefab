@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3511047710319424848}
   - component: {fileID: 4317321186544629868}
   - component: {fileID: 3128547103718381382}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2569909942059494383}
   - component: {fileID: 4487310364504343101}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Armor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9186853582899415611}
   - component: {fileID: 6436646618326222400}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -339,7 +339,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3511047709418328826}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,7 +370,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3511047710263387930}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shoty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -401,7 +401,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3511047710263387932}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shoty1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,7 +432,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3511047710263387934}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shoty2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -465,7 +465,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4573647434622728405}
   - component: {fileID: 4573647434617940469}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Beard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -550,7 +550,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4573647434622728525}
   - component: {fileID: 4573647434617940467}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EYEs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -658,7 +658,7 @@ GameObject:
   - component: {fileID: 4573647434623214960}
   - component: {fileID: 3624669662286816114}
   - component: {fileID: 3657687353892428100}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1039,7 +1039,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4573647434622728679}
   - component: {fileID: 4573647434617940479}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1124,7 +1124,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4573647434622728583}
   - component: {fileID: 4573647434617940473}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Jacket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1209,7 +1209,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4573647434622728601}
   - component: {fileID: 4573647434617940475}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hoodie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1294,7 +1294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4573647434622728607}
   - component: {fileID: 4573647434617940477}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hands
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1379,7 +1379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4573647434622728489}
   - component: {fileID: 4573647434617940465}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1464,7 +1464,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4573647434622729441}
   - component: {fileID: 4573647434617940451}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: teeth_Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1549,7 +1549,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4573647434622729257}
   - component: {fileID: 4573647434617940453}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rifle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1634,7 +1634,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4573647434622728639}
   - component: {fileID: 4573647434617940455}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Legs+boots
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1719,7 +1719,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8359560855842665553}
   - component: {fileID: 8431865325760094190}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Axe.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
